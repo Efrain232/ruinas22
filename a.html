@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Ventana Emergente de Cookies</title>
+    <style>
+        /* Estilos para la ventana emergente */
+        #cookie-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Estilos para el botón de aceptar */
+        #accept-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenido de tu sitio web -->
+
+    <!-- Ventana emergente de cookies -->
+    <div id="cookie-popup">
+        Este sitio web utiliza cookies para mejorar la experiencia del usuario. <a href="/politica-de-cookies">Más información</a>.
+        <button id="accept-button">Aceptar</button>
+    </div>
+
+    <script>
+        // Función para mostrar la ventana emergente de cookies
+        function showCookiePopup() {
+            var cookiePopup = document.getElementById('cookie-popup');
+            cookiePopup.style.display = 'block';
+        }
+
+        // Función para ocultar la ventana emergente de cookies y guardar la preferencia del usuario
+        function acceptCookies() {
+            var cookiePopup = document.getElementById('cookie-popup');
+            cookiePopup.style.display = 'none';
+            // Aquí puedes agregar código para guardar la preferencia del usuario (por ejemplo, establecer una cookie)
+        }
+
+        // Mostrar la ventana emergente cuando se carga la página
+        window.addEventListener('load', showCookiePopup);
+
+        // Asociar la función de aceptar con el botón
+        var acceptButton = document.getElementById('accept-button');
+        acceptButton.addEventListener('click', acceptCookies);
+    </script>
+</body>
+</html>
+

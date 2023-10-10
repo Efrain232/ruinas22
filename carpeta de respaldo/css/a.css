@@ -1,0 +1,87 @@
+html{
+    font-size: 16px;
+    font-family: cursive;
+}
+
+body{
+    background-color: rgb(105, 159, 206);
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 12em;
+}
+
+details{
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(247, 249, 250);
+    border-radius: 8px;
+    position: relative;
+    max-width: 600px;
+    border: 1px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+details :hover{
+    border: 1px solid wheat;
+}
+
+summary{
+    user-select: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: center;
+}
+
+summary :hover .title{
+    opacity: 1;
+}
+
+summary ::-webkit-detalis-marker{
+    display: none;
+}
+
+summary :focus{
+    outline: none;
+}
+
+summary :hover .icon{
+    opacity: 1;
+}
+
+.title{
+    color: gray;
+    width: 90%;
+    opacity: 0.65;
+    transition: all 250ms ease-in-out;
+}
+
+.content{
+    color: gray;
+    padding: 0.2em 1em 1em 1em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.icon{
+    opacity: 0.65;
+}
+
+.icon{
+    pointer-events: none;
+    position: absolute;
+    right: 1em;
+    transition: all 150ms ease-in-out;
+}
